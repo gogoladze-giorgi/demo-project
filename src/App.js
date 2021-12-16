@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import {Switch,Route,Redirect} from "react-router-dom";
+import PageNotFound from "./pages/pageNotFound";
+import User from "./pages/user";
+import UserDetails from "./pages/userDetail";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const App =()=> {
+
+  return <Switch>
+    <Route path='/' exact>
+      <Redirect to='/user'/>
+    </Route>
+    <Route path='/user' exact>
+      <User/>
+    </Route>
+    <Route path='/user/:userId'>
+      <UserDetails/>
+    </Route>
+    <Route path='*'>
+      <PageNotFound/>
+    </Route>
+  </Switch>
 }
-
 export default App;

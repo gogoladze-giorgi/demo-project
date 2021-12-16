@@ -1,0 +1,38 @@
+ul {
+   list-style: none;
+}
+
+.container{
+   display: flex;
+   align-items: center;
+   border: 1px solid black;
+   max-width: 60%;
+   margin: auto;
+}
+.container img {
+   width:260px;
+   margin:10px ;
+
+}
+.list{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+   background: #dbe7e7;
+   margin-left: 12px;
+   width:80%;
+   border: 1px solid black;
+}
+.list li{
+ padding-bottom: 9px;
+   font-weight: bold;
+}
+.friends{
+    text-align: center;
+}
+.loading{
+    text-align: center;
+    font-weight: bold;
+    font-size: 19px;
+    padding-top: 20%;
+}
